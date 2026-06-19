@@ -665,6 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Test
   handView: {fileID: 1847342636}
+  cardData: {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
 --- !u!1 &1578899289
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,16 +969,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4273742810675694420, guid: 2937b3747cdd9e446ad6d0e5ef74f20f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5172039742856938434, guid: 2937b3747cdd9e446ad6d0e5ef74f20f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 4458968059193137841, guid: 2937b3747cdd9e446ad6d0e5ef74f20f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2937b3747cdd9e446ad6d0e5ef74f20f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
