@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee31ffcdf9b9c949918dea639756a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Test
-  handView: {fileID: 0}
+  handView: {fileID: 1847342636}
 --- !u!1 &1578899289
 GameObject:
   m_ObjectHideFlags: 0
