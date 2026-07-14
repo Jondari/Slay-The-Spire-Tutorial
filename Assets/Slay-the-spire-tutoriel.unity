@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &83591114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 83591115}
+  m_Layer: 0
+  m_Name: DrawPilePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &83591115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83591114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.31, y: -5.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1251390070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105610910
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +273,53 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &340805533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340805534}
+  - component: {fileID: 340805535}
+  m_Layer: 0
+  m_Name: CardSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340805534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340805533}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1595909857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &340805535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340805533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16dfa404f2f9baf498e39a0f778f599c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardSystem
+  handView: {fileID: 1847342636}
+  drawPilePoint: {fileID: 83591115}
+  discardPilePoint: {fileID: 717155465}
 --- !u!1 &361333318
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,6 +667,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 438747041747689692, guid: 2937b3747cdd9e446ad6d0e5ef74f20f, type: 3}
   m_PrefabInstance: {fileID: 8573017582543401058}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &717155464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717155465}
+  m_Layer: 0
+  m_Name: DiscardPilePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717155465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717155464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.31, y: -5.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1251390070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899988208
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +925,39 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1251390069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251390070}
+  m_Layer: 0
+  m_Name: PileViews
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251390070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251390069}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 83591115}
+  - {fileID: 717155465}
+  m_Father: {fileID: 1620137879}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317416696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,8 +1171,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee31ffcdf9b9c949918dea639756a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Test
-  handView: {fileID: 1847342636}
-  cardData: {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  deckData:
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
 --- !u!1 &1578899289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1346,7 @@ Transform:
   - {fileID: 386507555}
   - {fileID: 1900755718}
   - {fileID: 1823771008}
+  - {fileID: 340805534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620137878
@@ -1230,6 +1381,7 @@ Transform:
   - {fileID: 135052434}
   - {fileID: 674945282}
   - {fileID: 1847342635}
+  - {fileID: 1251390070}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1626870895
