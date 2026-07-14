@@ -273,6 +273,61 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &195125411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 195125412}
+  - component: {fileID: 195125413}
+  m_Layer: 0
+  m_Name: MatchSetupSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &195125412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195125411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1595909857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &195125413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195125411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a254198438ef08c4581b9093e547d21e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MatchSetupSystem
+  deckData:
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
+  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
 --- !u!1 &340805533
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +877,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &910314977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910314978}
+  - component: {fileID: 910314979}
+  m_Layer: 0
+  m_Name: Interactions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &910314978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910314977}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1595909857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910314979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910314977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f18a46a9ec07d647b1cd90cf71b7d1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactions
 --- !u!1 &1232777842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,60 +1226,6 @@ Transform:
   - {fileID: 899988209}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1575066466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1575066467}
-  - component: {fileID: 1575066468}
-  m_Layer: 0
-  m_Name: TestSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1575066467
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575066466}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1595909857}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1575066468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575066466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ee31ffcdf9b9c949918dea639756a49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Test
-  deckData:
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
-  - {fileID: 11400000, guid: 19fe74dce0b81964a9ef9825038ab76d, type: 2}
 --- !u!1 &1578899289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,11 +1387,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1575066467}
+  - {fileID: 195125412}
   - {fileID: 386507555}
   - {fileID: 1900755718}
   - {fileID: 1823771008}
   - {fileID: 340805534}
+  - {fileID: 910314978}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620137878

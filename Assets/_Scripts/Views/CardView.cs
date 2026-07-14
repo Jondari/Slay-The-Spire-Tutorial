@@ -9,6 +9,8 @@ public class CardView : MonoBehaviour
     [SerializeField] private SpriteRenderer imageSR;
     [SerializeField] private GameObject wrapper;
     public Card Card {  get; private set; }
+    private Vector3 dragStartPosition;
+    private Quaternion dragStartRotation;
 
     public void Setup(Card card)
     {
@@ -21,6 +23,8 @@ public class CardView : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (!Interactions.Instance.PlayerCanHover())
+            return;
         wrapper.SetActive(false);
         Vector3 pos = new(transform.position.x, -2, 0);
         CardViewHoverSystem.Instance.Show(Card, pos);
@@ -28,7 +32,46 @@ public class CardView : MonoBehaviour
 
     private void OnMouseExit()
     {
+        if (!Interactions.Instance.PlayerCanHover())
+            return;
         CardViewHoverSystem.Instance.Hide();
         wrapper.SetActive(true);
+    }
+
+    void OnMouseDown()
+    {
+        if (!Interactions.Instance.PlayerCanInteract())
+            return;
+        Interactions.Instance.PlayerIsDragging = true;
+        wrapper.SetActive(true);
+        CardViewHoverSystem.Instance.Hide();
+        dragStartPosition = transform.position; 
+        dragStartRotation = transform.rotation;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        transform.position = MouseUtil.GetMousePositionInWorldSpace(-1);
+    }
+
+    private void OnMouseDrag()
+    {
+        if (!Interactions.Instance.PlayerCanInteract())
+            return;
+        transform.position = MouseUtil.GetMousePositionInWorldSpace(-1);
+    }
+
+    private void OnMouseUp()
+    {
+        if (!Interactions.Instance.PlayerCanInteract())
+            return;
+        if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 10f))
+        {
+            // Play card
+        }
+        else
+        {
+            // Return to the initial position and rotation
+            transform.position = dragStartPosition;
+            transform.rotation = dragStartRotation;
+        }
+        Interactions.Instance.PlayerIsDragging = false;
     }
 }
