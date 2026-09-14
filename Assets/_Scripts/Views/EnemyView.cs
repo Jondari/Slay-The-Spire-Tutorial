@@ -6,12 +6,11 @@ public class EnemyView : CombatantView
     [SerializeField] private TMP_Text attackText;
     public int AttackPower {  get; private set; }
 
-    public void Setup()
+    public void Setup(EnemyData enemyData)
     {
-        AttackPower = 10;
+        AttackPower = enemyData.AttackPower;
         UpdateAttackText();
-        int tempHealth = 100;
-        SetupBase(tempHealth, null);
+        SetupBase(enemyData.Health, enemyData.Image);
     }
 
     private void UpdateAttackText()

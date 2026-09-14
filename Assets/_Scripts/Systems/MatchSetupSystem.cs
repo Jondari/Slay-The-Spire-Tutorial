@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 public class MatchSetupSystem : MonoBehaviour
 {
-    [SerializeField] private List<CardData> deckData;
+    [SerializeField] private HeroData heroData;
 
     private void Start()
     {
-        CardSystem.Instance.Setup(deckData);
+        HeroSystem.Instance.Setup(heroData);
+        CardSystem.Instance.Setup(heroData.Deck);
 
         RefillManaGA refillManaGA = new();
 
