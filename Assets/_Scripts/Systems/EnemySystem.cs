@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,13 @@ public class EnemySystem : Singleton<EnemySystem>
     private void OnEnable()
     {
         ActionSystem.AttachPerformer<EnemyTurnGA>(EnemyTurnPerformer);
+        ActionSystem.AttachPerformer<AttackHeroGA>(AttackHeroPerformer);
     }
 
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<EnemyTurnGA>();
+        ActionSystem.DetachPerformer<AttackHeroGA>();
     }
 
     public void Setup(List<EnemyData> enemyDatas)
@@ -28,7 +31,24 @@ public class EnemySystem : Singleton<EnemySystem>
     private IEnumerator EnemyTurnPerformer(EnemyTurnGA enemyTurnGA)
     {
         Debug.Log("Enemy Turn");
-        yield return new WaitForSeconds(2f);
+        foreach (var enemy in enemyBoardView.EnemyViews)
+        {
+            AttackHeroGA attackHeroGA = new(enemy);
+            ActionSystem.Instance.AddReaction(attackHeroGA);
+        }
         Debug.Log("End Enemy Turn");
+        yield return null;
+    }
+
+    private IEnumerator AttackHeroPerformer(AttackHeroGA attackHeroGA)
+    {
+        EnemyView attacker = attackHeroGA.Attacker;
+        // Attack animation (this is a simple example)
+        Tween tween = attacker.transform.DOMoveX(attacker.transform.position.x - 1f, 0.15f);
+        yield return tween.WaitForCompletion();
+        attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.15f);
+        // Deal Damage
+        DealDamageGA dealDamageGA = new(attacker.AttackPower, new() { HeroSystem.Instance.HeroView });
+        ActionSystem.Instance.AddReaction(dealDamageGA);
     }
 }
