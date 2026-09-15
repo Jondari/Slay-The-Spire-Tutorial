@@ -8,7 +8,8 @@ public class Card
     
     public Sprite Image => data.Image;
 
-    public List<Effect> Effects => data.Effects;
+    public Effect ManualTargetEffect => data.ManualTargetEffect;
+    public List<AutoTargetEffect> OtherEffects => data.OtherEffects;
 
     public int Mana {  get; private set; }
     private readonly CardData data;
