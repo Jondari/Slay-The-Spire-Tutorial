@@ -15,3 +15,13 @@ MonoBehaviour:
   <Description>k__BackingField: Deal 4 damage to an enemy
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 21300000, guid: 789c57e06f4eb52438a6fcd1e9cb8da4, type: 3}
+  <ManualTargetEffect>k__BackingField:
+    rid: 3878118619839725642
+  <OtherEffects>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3878118619839725642
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 4

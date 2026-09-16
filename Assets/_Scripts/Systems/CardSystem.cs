@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CardSystem : Singleton<CardSystem>
 {
@@ -80,6 +81,11 @@ public class CardSystem : Singleton<CardSystem>
         ActionSystem.Instance.AddReaction(spendManaGA);
 
         // Perform Effects
+        if (playCardGA.Card.ManualTargetEffect != null)
+        {
+            PerformEffectGA performEffectGA = new(playCardGA.Card.ManualTargetEffect, new() { playCardGA.ManualTarget });
+            ActionSystem.Instance.AddReaction(performEffectGA);
+        }
         foreach(var effectWrapper in playCardGA.Card.OtherEffects)
         {
             List<CombatantView> targets = effectWrapper.TargetMode.GetTargets();
