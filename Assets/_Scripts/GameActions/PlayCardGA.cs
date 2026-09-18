@@ -1,5 +1,3 @@
-using static UnityEngine.GraphicsBuffer;
-
 public class PlayCardGA : GameAction
 {
     public EnemyView ManualTarget {  get; private set; }

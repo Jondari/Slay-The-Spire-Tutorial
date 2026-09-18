@@ -20,10 +20,22 @@ public class DamageSystem : MonoBehaviour
 
         foreach (var target in dealDamageGA.Targets)
         {
+            // A queued action outlive one of its targets.
+            if (target == null)
+            {
+                continue;
+            }
+
             target.Damage(dealDamageGA.Amount);
-            //Intanciante the VFX
+            // Intanciante the VFX
             Instantiate(damageVFX, target.transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.15f);
+
+            if (target == null)
+            {
+                continue;
+            }
+
             if (target.CurrentHealth <= 0)
             {
                 if (target is EnemyView enemyView)

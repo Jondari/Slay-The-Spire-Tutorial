@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class Interactions : Singleton<Interactions>
 {
     public bool PlayerIsDragging { get; set; } = false;

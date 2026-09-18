@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class AttackHeroGA : GameAction, IHaveCaster
 {
     public EnemyView Attacker { get; private set; }
