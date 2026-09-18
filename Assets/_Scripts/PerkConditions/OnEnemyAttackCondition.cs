@@ -1,5 +1,6 @@
 using System;
 
+[System.Serializable]
 public class OnEnemyAttackCondition : PerkCondition
 {
     public override bool SubConditionIsMet(GameAction gameAction)
