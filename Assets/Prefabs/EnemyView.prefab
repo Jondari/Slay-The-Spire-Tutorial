@@ -230,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyView
   healthText: {fileID: 7350021704806602022}
   spriteRenderer: {fileID: 4213056909185134969}
+  statusEffectsUI: {fileID: 7357520250913507176}
   attackText: {fileID: 603043644378887557}
 --- !u!65 &897565769743357072
 BoxCollider:
@@ -354,3 +355,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+--- !u!114 &7357520250913507176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9194999087471945115, guid: 62c87012de506ec45b75af02fa4c6fce, type: 3}
+  m_PrefabInstance: {fileID: 1837498731423802099}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b233d75fee17a8448a161e4ff645e900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatusEffectsUI

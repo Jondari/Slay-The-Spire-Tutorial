@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeroView
   healthText: {fileID: 8014839642215538532}
   spriteRenderer: {fileID: 3696649434221607739}
+  statusEffectsUI: {fileID: 8007895276274584874}
 --- !u!1001 &1205540422712977585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,6 +123,17 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2591772879343522698, guid: 62c87012de506ec45b75af02fa4c6fce, type: 3}
   m_PrefabInstance: {fileID: 1205540422712977585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8007895276274584874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9194999087471945115, guid: 62c87012de506ec45b75af02fa4c6fce, type: 3}
+  m_PrefabInstance: {fileID: 1205540422712977585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b233d75fee17a8448a161e4ff645e900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatusEffectsUI
 --- !u!114 &8014839642215538532 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9187517582219392981, guid: 62c87012de506ec45b75af02fa4c6fce, type: 3}
